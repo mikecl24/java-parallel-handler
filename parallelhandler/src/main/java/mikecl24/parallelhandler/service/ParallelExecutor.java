@@ -33,8 +33,12 @@ public class ParallelExecutor {
         tasks.add(2);
         tasks.add(3);
 
-        TaskRunner taskRunner = new TaskRunner(tasks);
-        taskList.execute(taskRunner);
+        TaskRunner taskRunner1 = new TaskRunner(tasks);
+        TaskRunner taskRunner2 = new TaskRunner(tasks);
+        TaskRunner taskRunner3 = new TaskRunner(tasks);
+        taskList.execute(taskRunner1);
+        taskList.execute(taskRunner2);
+        taskList.execute(taskRunner3);
     }
 
     public Integer getPoolSize() {

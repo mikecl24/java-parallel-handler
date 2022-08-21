@@ -21,6 +21,13 @@ public class TaskRunner implements Runnable {
         logger.info("Running from thread: ", this.hashCode());
         for (int task: this.tasks) {
             logger.info("Handling job: " + task + " from thread " + this.hashCode());
+            // Artificial delay...
+            try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
         }
         logger.info("Thread finished");
     }
