@@ -36,4 +36,16 @@
         <!-- end::tests[] -->
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>mikecl24.parallelhandler.ParallelHandler</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
